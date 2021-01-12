@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.loginmodule.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment1" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginSuccessFragment"
+            app:destination="@id/loginSuccessFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginFailFragment"
+            app:destination="@id/loginFailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFailFragment"
+        android:name="com.example.loginmodule.LoginFailFragment"
+        android:label="login_fail_fragment"
+        tools:layout="@layout/login_fail_fragment" />
+    <fragment
+        android:id="@+id/loginSuccessFragment"
+        android:name="com.example.loginmodule.LoginSuccessFragment"
+        android:label="login_success_fragment"
+        tools:layout="@layout/login_success_fragment" />
+</navigation>
