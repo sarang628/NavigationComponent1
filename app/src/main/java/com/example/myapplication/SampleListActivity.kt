@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.databinding.SampleListActivityBinding
 import com.example.myapplication.main.SampleListFragment
+import com.example.myapplication.safeargs.SafeArgsActivity
 import com.example.myapplication.sample1.MainActivity
 import com.example.myapplication.sample2.Sample2Activity
 
@@ -25,6 +26,10 @@ class SampleListActivity : AppCompatActivity() {
 
         viewBinding.btnSample2.setOnClickListener {
             Sample2Activity.go(this)
+        }
+
+        viewBinding.btnSample3.setOnClickListener {
+            SafeArgsActivity.go(this)
         }
     }
 }

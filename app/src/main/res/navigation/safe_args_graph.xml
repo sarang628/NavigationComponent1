@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/safe_args_graph"
+    app:startDestination="@id/safeArgsFragment">
+
+    <fragment
+        android:id="@+id/safeArgsFragment"
+        android:name="com.example.myapplication.safeargs.SafeArgsFragment"
+        android:label="safe_args_fragment"
+        tools:layout="@layout/safe_args_fragment">
+        <action
+            android:id="@+id/action_safeArgsFragment_to_safeArgs1Fragment"
+            app:destination="@id/safeArgs1Fragment">
+
+            <argument
+                android:name="myArg"
+                android:defaultValue="10"
+                app:argType="integer" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/safeArgs1Fragment"
+        android:name="com.example.myapplication.safeargs.SafeArgs1Fragment"
+        android:label="safe_args1_fragment"
+        tools:layout="@layout/safe_args1_fragment" >
+        <argument
+            android:name="myArg"
+            app:argType="integer" />
+    </fragment>
+</navigation>
